@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sistema
 {
@@ -16,6 +11,10 @@ namespace Sistema
         {
             InitializeComponent();
         }
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-I8J3S4E\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_redeextra");
+        SqlCommand cm = new SqlCommand();
+        SqlDataReader lerdados;
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -31,9 +30,39 @@ namespace Sistema
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PaginaPrincipal pagina = new PaginaPrincipal();
-            pagina.Show();
-            this.Hide();
+            if (txtlogin.Text == "" && txtsenha.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo login e senha !!", "Login Incorreto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtlogin.Focus();
+
+            }
+            else
+            {
+                try
+                {
+                    cn.Open();
+                    cm.CommandText = "select * from tbl_funcionario where login_func = ('" + txtlogin.Text + "') and senha_func = ('" + txtsenha.Text + "')";
+                    cm.Connection = cn;
+                    lerdados = cm.ExecuteReader();
+                    if (lerdados.HasRows)
+                    {
+                        PaginaPrincipal pagina = new PaginaPrincipal();
+                        pagina.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario ou senha invalidos!!\nTente novamente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtlogin.Clear();
+                        txtsenha.Clear();
+                        txtlogin.Focus();
+                    }
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

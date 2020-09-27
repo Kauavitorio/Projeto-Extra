@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
             this.painelsuperior = new System.Windows.Forms.Panel();
-            this.btnsair = new System.Windows.Forms.Button();
             this.btnminimizar = new System.Windows.Forms.Button();
+            this.btnsair = new System.Windows.Forms.Button();
             this.painellateral = new System.Windows.Forms.Panel();
-            this.btntema = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btntema2 = new System.Windows.Forms.Button();
-            this.btntrocarconta = new System.Windows.Forms.Button();
-            this.btnitens = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btndesligaluz = new System.Windows.Forms.Button();
+            this.btnajuda = new System.Windows.Forms.Button();
             this.paneldositens = new System.Windows.Forms.Panel();
             this.btncodigos = new System.Windows.Forms.Button();
-            this.btnajuda = new System.Windows.Forms.Button();
-            this.btndesligaluz = new System.Windows.Forms.Button();
+            this.btnitens = new System.Windows.Forms.Button();
+            this.btntrocarconta = new System.Windows.Forms.Button();
+            this.btntema2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btntema = new System.Windows.Forms.Button();
             this.alertzinho = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtidprod = new System.Windows.Forms.TextBox();
@@ -52,14 +53,15 @@
             this.imginsiraocode = new System.Windows.Forms.PictureBox();
             this.PainelPrincipal = new System.Windows.Forms.Panel();
             this.btnfinalizarcompra = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.painelsuperior.SuspendLayout();
             this.painellateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneldositens.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alertzinho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imginsiraocode)).BeginInit();
             this.PainelPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // painelsuperior
@@ -72,6 +74,22 @@
             this.painelsuperior.Name = "painelsuperior";
             this.painelsuperior.Size = new System.Drawing.Size(1350, 28);
             this.painelsuperior.TabIndex = 9;
+            // 
+            // btnminimizar
+            // 
+            this.btnminimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnminimizar.FlatAppearance.BorderSize = 0;
+            this.btnminimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.btnminimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnminimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnminimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnminimizar.ForeColor = System.Drawing.Color.White;
+            this.btnminimizar.Location = new System.Drawing.Point(1255, -3);
+            this.btnminimizar.Name = "btnminimizar";
+            this.btnminimizar.Size = new System.Drawing.Size(49, 31);
+            this.btnminimizar.TabIndex = 9;
+            this.btnminimizar.Text = "-";
+            this.btnminimizar.UseVisualStyleBackColor = false;
             // 
             // btnsair
             // 
@@ -89,22 +107,6 @@
             this.btnsair.Text = "X";
             this.btnsair.UseVisualStyleBackColor = false;
             this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
-            // 
-            // btnminimizar
-            // 
-            this.btnminimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnminimizar.FlatAppearance.BorderSize = 0;
-            this.btnminimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            this.btnminimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnminimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnminimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnminimizar.ForeColor = System.Drawing.Color.White;
-            this.btnminimizar.Location = new System.Drawing.Point(1255, -3);
-            this.btnminimizar.Name = "btnminimizar";
-            this.btnminimizar.Size = new System.Drawing.Size(49, 31);
-            this.btnminimizar.TabIndex = 9;
-            this.btnminimizar.Text = "-";
-            this.btnminimizar.UseVisualStyleBackColor = false;
             // 
             // painellateral
             // 
@@ -124,79 +126,54 @@
             this.painellateral.Size = new System.Drawing.Size(188, 701);
             this.painellateral.TabIndex = 10;
             // 
-            // btntema
+            // button1
             // 
-            this.btntema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btntema.FlatAppearance.BorderSize = 0;
-            this.btntema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntema.ForeColor = System.Drawing.Color.White;
-            this.btntema.Location = new System.Drawing.Point(0, 566);
-            this.btntema.Name = "btntema";
-            this.btntema.Size = new System.Drawing.Size(188, 42);
-            this.btntema.TabIndex = 0;
-            this.btntema.Text = "Tema Claro";
-            this.btntema.UseVisualStyleBackColor = false;
-            this.btntema.Click += new System.EventHandler(this.btntema_Click);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 614);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 54);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Configuração";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             // 
-            // pictureBox1
+            // btndesligaluz
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btndesligaluz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btndesligaluz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btndesligaluz.FlatAppearance.BorderSize = 0;
+            this.btndesligaluz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndesligaluz.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndesligaluz.ForeColor = System.Drawing.Color.White;
+            this.btndesligaluz.Location = new System.Drawing.Point(0, 496);
+            this.btndesligaluz.Name = "btndesligaluz";
+            this.btndesligaluz.Size = new System.Drawing.Size(188, 55);
+            this.btndesligaluz.TabIndex = 12;
+            this.btndesligaluz.Text = "Desligar Luz";
+            this.btndesligaluz.UseVisualStyleBackColor = false;
+            this.btndesligaluz.Visible = false;
+            this.btndesligaluz.Click += new System.EventHandler(this.btndesligaluz_Click);
             // 
-            // btntema2
+            // btnajuda
             // 
-            this.btntema2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.btntema2.FlatAppearance.BorderSize = 0;
-            this.btntema2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntema2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntema2.ForeColor = System.Drawing.Color.Black;
-            this.btntema2.Location = new System.Drawing.Point(0, 566);
-            this.btntema2.Name = "btntema2";
-            this.btntema2.Size = new System.Drawing.Size(188, 42);
-            this.btntema2.TabIndex = 1;
-            this.btntema2.Text = "Tema Dark";
-            this.btntema2.UseVisualStyleBackColor = false;
-            this.btntema2.Visible = false;
-            this.btntema2.Click += new System.EventHandler(this.btntema2_Click_1);
-            // 
-            // btntrocarconta
-            // 
-            this.btntrocarconta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btntrocarconta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btntrocarconta.FlatAppearance.BorderSize = 0;
-            this.btntrocarconta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntrocarconta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntrocarconta.ForeColor = System.Drawing.Color.White;
-            this.btntrocarconta.Location = new System.Drawing.Point(0, 674);
-            this.btntrocarconta.Name = "btntrocarconta";
-            this.btntrocarconta.Size = new System.Drawing.Size(188, 55);
-            this.btntrocarconta.TabIndex = 9;
-            this.btntrocarconta.Text = "Trocar Conta";
-            this.btntrocarconta.UseVisualStyleBackColor = false;
-            // 
-            // btnitens
-            // 
-            this.btnitens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnitens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnitens.FlatAppearance.BorderSize = 0;
-            this.btnitens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnitens.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnitens.ForeColor = System.Drawing.Color.White;
-            this.btnitens.Image = ((System.Drawing.Image)(resources.GetObject("btnitens.Image")));
-            this.btnitens.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnitens.Location = new System.Drawing.Point(0, 170);
-            this.btnitens.Name = "btnitens";
-            this.btnitens.Size = new System.Drawing.Size(188, 54);
-            this.btnitens.TabIndex = 10;
-            this.btnitens.Text = "Itens";
-            this.btnitens.UseVisualStyleBackColor = false;
-            this.btnitens.Click += new System.EventHandler(this.btnitens_Click);
+            this.btnajuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnajuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnajuda.FlatAppearance.BorderSize = 0;
+            this.btnajuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnajuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnajuda.ForeColor = System.Drawing.Color.White;
+            this.btnajuda.Location = new System.Drawing.Point(0, 496);
+            this.btnajuda.Name = "btnajuda";
+            this.btnajuda.Size = new System.Drawing.Size(188, 55);
+            this.btnajuda.TabIndex = 11;
+            this.btnajuda.Text = "Solicitar Ajuda";
+            this.btnajuda.UseVisualStyleBackColor = false;
+            this.btnajuda.Click += new System.EventHandler(this.btnajuda_Click);
             // 
             // paneldositens
             // 
@@ -226,38 +203,79 @@
             this.btncodigos.UseVisualStyleBackColor = false;
             this.btncodigos.Click += new System.EventHandler(this.btncodigos_Click);
             // 
-            // btnajuda
+            // btnitens
             // 
-            this.btnajuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnajuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnajuda.FlatAppearance.BorderSize = 0;
-            this.btnajuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnajuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnajuda.ForeColor = System.Drawing.Color.White;
-            this.btnajuda.Location = new System.Drawing.Point(0, 496);
-            this.btnajuda.Name = "btnajuda";
-            this.btnajuda.Size = new System.Drawing.Size(188, 55);
-            this.btnajuda.TabIndex = 11;
-            this.btnajuda.Text = "Solicitar Ajuda";
-            this.btnajuda.UseVisualStyleBackColor = false;
-            this.btnajuda.Click += new System.EventHandler(this.btnajuda_Click);
+            this.btnitens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnitens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnitens.FlatAppearance.BorderSize = 0;
+            this.btnitens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnitens.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnitens.ForeColor = System.Drawing.Color.White;
+            this.btnitens.Image = ((System.Drawing.Image)(resources.GetObject("btnitens.Image")));
+            this.btnitens.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnitens.Location = new System.Drawing.Point(0, 170);
+            this.btnitens.Name = "btnitens";
+            this.btnitens.Size = new System.Drawing.Size(188, 54);
+            this.btnitens.TabIndex = 10;
+            this.btnitens.Text = "Itens";
+            this.btnitens.UseVisualStyleBackColor = false;
+            this.btnitens.Click += new System.EventHandler(this.btnitens_Click);
             // 
-            // btndesligaluz
+            // btntrocarconta
             // 
-            this.btndesligaluz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btndesligaluz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btndesligaluz.FlatAppearance.BorderSize = 0;
-            this.btndesligaluz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndesligaluz.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndesligaluz.ForeColor = System.Drawing.Color.White;
-            this.btndesligaluz.Location = new System.Drawing.Point(0, 496);
-            this.btndesligaluz.Name = "btndesligaluz";
-            this.btndesligaluz.Size = new System.Drawing.Size(188, 55);
-            this.btndesligaluz.TabIndex = 12;
-            this.btndesligaluz.Text = "Desligar Luz";
-            this.btndesligaluz.UseVisualStyleBackColor = false;
-            this.btndesligaluz.Visible = false;
-            this.btndesligaluz.Click += new System.EventHandler(this.btndesligaluz_Click);
+            this.btntrocarconta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btntrocarconta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btntrocarconta.FlatAppearance.BorderSize = 0;
+            this.btntrocarconta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntrocarconta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntrocarconta.ForeColor = System.Drawing.Color.White;
+            this.btntrocarconta.Location = new System.Drawing.Point(0, 674);
+            this.btntrocarconta.Name = "btntrocarconta";
+            this.btntrocarconta.Size = new System.Drawing.Size(188, 55);
+            this.btntrocarconta.TabIndex = 9;
+            this.btntrocarconta.Text = "Trocar Conta";
+            this.btntrocarconta.UseVisualStyleBackColor = false;
+            // 
+            // btntema2
+            // 
+            this.btntema2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.btntema2.FlatAppearance.BorderSize = 0;
+            this.btntema2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntema2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntema2.ForeColor = System.Drawing.Color.Black;
+            this.btntema2.Location = new System.Drawing.Point(0, 566);
+            this.btntema2.Name = "btntema2";
+            this.btntema2.Size = new System.Drawing.Size(188, 42);
+            this.btntema2.TabIndex = 1;
+            this.btntema2.Text = "Tema Dark";
+            this.btntema2.UseVisualStyleBackColor = false;
+            this.btntema2.Visible = false;
+            this.btntema2.Click += new System.EventHandler(this.btntema2_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btntema
+            // 
+            this.btntema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btntema.FlatAppearance.BorderSize = 0;
+            this.btntema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntema.ForeColor = System.Drawing.Color.White;
+            this.btntema.Location = new System.Drawing.Point(0, 566);
+            this.btntema.Name = "btntema";
+            this.btntema.Size = new System.Drawing.Size(188, 42);
+            this.btntema.TabIndex = 0;
+            this.btntema.Text = "Tema Claro";
+            this.btntema.UseVisualStyleBackColor = false;
+            this.btntema.Click += new System.EventHandler(this.btntema_Click);
             // 
             // alertzinho
             // 
@@ -358,6 +376,7 @@
             // PainelPrincipal
             // 
             this.PainelPrincipal.BackColor = System.Drawing.Color.Black;
+            this.PainelPrincipal.Controls.Add(this.dataGridView1);
             this.PainelPrincipal.Controls.Add(this.btnfinalizarcompra);
             this.PainelPrincipal.Controls.Add(this.imginsiraocode);
             this.PainelPrincipal.Controls.Add(this.txtqtprod);
@@ -389,21 +408,13 @@
             this.btnfinalizarcompra.Text = "Finalizar Compra";
             this.btnfinalizarcompra.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // dataGridView1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 614);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 54);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Configuração";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(809, 115);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(529, 404);
+            this.dataGridView1.TabIndex = 20;
             // 
             // PaginaPrincipal
             // 
@@ -418,12 +429,13 @@
             this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             this.painelsuperior.ResumeLayout(false);
             this.painellateral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.paneldositens.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alertzinho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imginsiraocode)).EndInit();
             this.PainelPrincipal.ResumeLayout(false);
             this.PainelPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,5 +466,6 @@
         private System.Windows.Forms.Panel PainelPrincipal;
         private System.Windows.Forms.Button btnfinalizarcompra;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
