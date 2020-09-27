@@ -26,6 +26,8 @@ namespace Sistema
             painelsuperior.BackColor = Color.FromArgb(218,218,218);
             btncadastrarprod.BackColor = Color.FromArgb(190,190,190);
             btncadastrarprod.ForeColor = Color.FromArgb(0, 0, 0);
+            btnsai.ForeColor = Color.FromArgb(0, 0, 0);
+            btnmini.ForeColor = Color.FromArgb(0, 0, 0);
         }
 
         private void temadark()
@@ -36,7 +38,9 @@ namespace Sistema
             painellateral.BackColor = Color.FromArgb(40,40,40);
             painelsuperior.BackColor = Color.FromArgb(40,40,40);
             btncadastrarprod.BackColor = Color.FromArgb(30,30,30);
-            btncadastrarprod.ForeColor = Color.FromArgb(255,255,255);
+            btncadastrarprod.ForeColor = Color.FromArgb(255, 255, 255);
+            btnmini.ForeColor = Color.FromArgb(255, 255, 255);
+            btnsai.ForeColor = Color.FromArgb(255, 255, 255);
 
         }
 
@@ -70,6 +74,11 @@ namespace Sistema
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

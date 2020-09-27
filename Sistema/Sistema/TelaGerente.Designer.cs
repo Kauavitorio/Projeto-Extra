@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaGerente));
             this.btnsair = new System.Windows.Forms.Button();
             this.painelsuperior = new System.Windows.Forms.Panel();
+            this.btnmini = new System.Windows.Forms.Button();
+            this.btnsai = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btntemaclaro = new System.Windows.Forms.Button();
             this.btncadastrarprod = new System.Windows.Forms.Button();
             this.btntemadark = new System.Windows.Forms.Button();
             this.painellateral = new System.Windows.Forms.Panel();
             this.btnminimizar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.painelprincipal = new System.Windows.Forms.Panel();
             this.painelsuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,13 +64,47 @@
             // painelsuperior
             // 
             this.painelsuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.painelsuperior.Controls.Add(this.button1);
-            this.painelsuperior.Controls.Add(this.button2);
+            this.painelsuperior.Controls.Add(this.btnmini);
+            this.painelsuperior.Controls.Add(this.btnsai);
             this.painelsuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelsuperior.Location = new System.Drawing.Point(0, 0);
             this.painelsuperior.Name = "painelsuperior";
             this.painelsuperior.Size = new System.Drawing.Size(1366, 25);
             this.painelsuperior.TabIndex = 0;
+            // 
+            // btnmini
+            // 
+            this.btnmini.BackColor = System.Drawing.Color.Transparent;
+            this.btnmini.FlatAppearance.BorderSize = 0;
+            this.btnmini.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.btnmini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnmini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmini.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmini.ForeColor = System.Drawing.Color.White;
+            this.btnmini.Location = new System.Drawing.Point(1271, -6);
+            this.btnmini.Name = "btnmini";
+            this.btnmini.Size = new System.Drawing.Size(49, 31);
+            this.btnmini.TabIndex = 11;
+            this.btnmini.Text = "-";
+            this.btnmini.UseVisualStyleBackColor = false;
+            this.btnmini.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnsai
+            // 
+            this.btnsai.BackColor = System.Drawing.Color.Transparent;
+            this.btnsai.FlatAppearance.BorderSize = 0;
+            this.btnsai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.btnsai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnsai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsai.ForeColor = System.Drawing.Color.White;
+            this.btnsai.Location = new System.Drawing.Point(1326, -6);
+            this.btnsai.Name = "btnsai";
+            this.btnsai.Size = new System.Drawing.Size(49, 31);
+            this.btnsai.TabIndex = 12;
+            this.btnsai.Text = "X";
+            this.btnsai.UseVisualStyleBackColor = false;
+            this.btnsai.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -119,7 +153,7 @@
             this.btntemadark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntemadark.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntemadark.ForeColor = System.Drawing.Color.Black;
-            this.btntemadark.Location = new System.Drawing.Point(-3, 500);
+            this.btntemadark.Location = new System.Drawing.Point(0, 557);
             this.btntemadark.Name = "btntemadark";
             this.btntemadark.Size = new System.Drawing.Size(200, 42);
             this.btntemadark.TabIndex = 16;
@@ -158,39 +192,6 @@
             this.btnminimizar.TabIndex = 17;
             this.btnminimizar.Text = "-";
             this.btnminimizar.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1271, -6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 31);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1326, -6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 31);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // painelprincipal
             // 
@@ -231,8 +232,8 @@
         private System.Windows.Forms.Button btntemadark;
         private System.Windows.Forms.Panel painellateral;
         private System.Windows.Forms.Button btnminimizar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnmini;
+        private System.Windows.Forms.Button btnsai;
         private System.Windows.Forms.Panel painelprincipal;
     }
 }

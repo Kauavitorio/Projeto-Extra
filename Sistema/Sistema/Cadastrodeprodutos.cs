@@ -43,9 +43,33 @@ namespace Sistema
 
         }
 
+        private void escondercadastro()
+        {
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            txtcadnome.Visible = false;
+            txtcadqt.Visible = false;
+            txtcadvl.Visible = false;
+            txtcadvali.Visible = false;
+            btniniciarcadastro.Visible = true;
+            btncadastrar.Visible = false;
+        }
+
         private void Cadastrodeprodutos_Load(object sender, EventArgs e)
         {
             carregarprod();
+
+            dtg.DefaultCellStyle.ForeColor =
+                Color.White;
+
+            dtg.RowsDefaultCellStyle.BackColor =
+
+            Color.Black;
+
+            dtg.BackgroundColor = Color.Black;
+
             dtg.Columns[0].HeaderText =
 
             "Código Produto";
@@ -118,6 +142,7 @@ namespace Sistema
                 {
                     cn.Close();
                     carregarprod();
+                    escondercadastro();
                 }
             }
         }
