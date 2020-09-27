@@ -52,8 +52,8 @@
             this.txtqtprod = new System.Windows.Forms.TextBox();
             this.imginsiraocode = new System.Windows.Forms.PictureBox();
             this.PainelPrincipal = new System.Windows.Forms.Panel();
-            this.btnfinalizarcompra = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnfinalizarcompra = new System.Windows.Forms.Button();
             this.painelsuperior.SuspendLayout();
             this.painellateral.SuspendLayout();
             this.paneldositens.SuspendLayout();
@@ -90,6 +90,7 @@
             this.btnminimizar.TabIndex = 9;
             this.btnminimizar.Text = "-";
             this.btnminimizar.UseVisualStyleBackColor = false;
+            this.btnminimizar.Click += new System.EventHandler(this.btnminimizar_Click);
             // 
             // btnsair
             // 
@@ -394,6 +395,14 @@
             this.PainelPrincipal.Size = new System.Drawing.Size(1350, 729);
             this.PainelPrincipal.TabIndex = 0;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(809, 115);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(529, 404);
+            this.dataGridView1.TabIndex = 20;
+            // 
             // btnfinalizarcompra
             // 
             this.btnfinalizarcompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -407,14 +416,6 @@
             this.btnfinalizarcompra.TabIndex = 19;
             this.btnfinalizarcompra.Text = "Finalizar Compra";
             this.btnfinalizarcompra.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(809, 115);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(529, 404);
-            this.dataGridView1.TabIndex = 20;
             // 
             // PaginaPrincipal
             // 

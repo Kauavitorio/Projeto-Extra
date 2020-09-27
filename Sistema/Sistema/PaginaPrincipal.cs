@@ -142,6 +142,9 @@ namespace Sistema
             }
         }
 
-        
+        private void btnminimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

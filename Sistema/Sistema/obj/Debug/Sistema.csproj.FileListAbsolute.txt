@@ -26,3 +26,4 @@ C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\bin\Debug\System.Run
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\bin\Debug\MySql.Data.xml
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.exe.config
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.csproj.CopyComplete
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.TelaGerente.resources

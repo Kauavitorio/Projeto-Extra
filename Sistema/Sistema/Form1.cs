@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace Sistema
 {
@@ -32,7 +33,7 @@ namespace Sistema
         {
             if (txtlogin.Text == "" && txtsenha.Text == "")
             {
-                MessageBox.Show("Obrigatório informar o campo login e senha !!", "Login Incorreto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Obrigatório informar o campo login e senha !!", "Não a nada inserido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtlogin.Focus();
 
             }
@@ -72,7 +73,24 @@ namespace Sistema
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
