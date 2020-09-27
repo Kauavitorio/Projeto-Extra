@@ -1,0 +1,13 @@
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\bin\Debug\Sistema.exe.config
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\bin\Debug\Sistema.exe
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\bin\Debug\Sistema.pdb
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.csprojAssemblyReference.cache
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.Form1.resources
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.Properties.Resources.resources
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.Teladesplash.resources
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.csproj.GenerateResource.cache
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.exe
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.pdb
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.PaginaPrincipal.resources
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.logingerente.resources
