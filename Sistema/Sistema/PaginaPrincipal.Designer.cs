@@ -113,12 +113,12 @@
             // 
             this.painellateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.painellateral.Controls.Add(this.button1);
+            this.painellateral.Controls.Add(this.btntema2);
             this.painellateral.Controls.Add(this.btndesligaluz);
             this.painellateral.Controls.Add(this.btnajuda);
             this.painellateral.Controls.Add(this.paneldositens);
             this.painellateral.Controls.Add(this.btnitens);
             this.painellateral.Controls.Add(this.btntrocarconta);
-            this.painellateral.Controls.Add(this.btntema2);
             this.painellateral.Controls.Add(this.pictureBox1);
             this.painellateral.Controls.Add(this.btntema);
             this.painellateral.Dock = System.Windows.Forms.DockStyle.Left;
@@ -236,6 +236,7 @@
             this.btntrocarconta.TabIndex = 9;
             this.btntrocarconta.Text = "Trocar Conta";
             this.btntrocarconta.UseVisualStyleBackColor = false;
+            this.btntrocarconta.Click += new System.EventHandler(this.btntrocarconta_Click);
             // 
             // btntema2
             // 

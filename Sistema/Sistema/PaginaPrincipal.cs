@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -145,6 +146,20 @@ namespace Sistema
         private void btnminimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btntrocarconta_Click(object sender, EventArgs e)
+        {
+            if(DialogResult.Yes == MessageBox.Show("Gostaria realmente alterar sua conta?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2))
+            {
+                this.Hide();
+                Form1 form = new Form1();
+                form.Show();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

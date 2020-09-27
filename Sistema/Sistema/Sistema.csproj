@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastrodeprodutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastrodeprodutos.Designer.cs">
+      <DependentUpon>Cadastrodeprodutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="TelaGerente.Designer.cs">
       <DependentUpon>TelaGerente.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cadastrodeprodutos.resx">
+      <DependentUpon>Cadastrodeprodutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
