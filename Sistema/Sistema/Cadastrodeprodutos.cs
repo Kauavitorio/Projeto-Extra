@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.CompilerServices;
 
 namespace Sistema
 {
@@ -111,6 +112,35 @@ namespace Sistema
             txtcadvali.Visible = true;
             txtcadvl.Visible = true;
         }
+        private void carregaLinha()
+        {
+            txtcdprod.Text = dtg.SelectedRows[0].Cells[0].Value.ToString();
+            txtnomeprod.Text = dtg.SelectedRows[0].Cells[1].Value.ToString();
+            txtqtprod.Text = dtg.SelectedRows[0].Cells[2].Value.ToString();
+            txtvaliprod.Text = dtg.SelectedRows[0].Cells[3].Value.ToString();
+            txtprecoprod.Text = dtg.SelectedRows[0].Cells[4].Value.ToString();
+        }
+
+        private void habilitarcampos()
+        {
+            txtnomeprod.ReadOnly = false;
+            txtcdprod.ReadOnly = false;
+            txtqtprod.ReadOnly = false;
+            txtvaliprod.ReadOnly = false;
+            txtprecoprod.ReadOnly = false;
+            btniniciarcadastro.Visible = false;
+            btnconcluiralt.Visible = true;
+        }
+        private void desabilitarcampos()
+        {
+            txtnomeprod.ReadOnly = true;
+            txtcdprod.ReadOnly = true;
+            txtqtprod.ReadOnly = true;
+            txtvaliprod.ReadOnly = true;
+            txtprecoprod.ReadOnly = true;
+            btniniciarcadastro.Visible = true;
+            btnconcluiralt.Visible = false;
+        }
 
         private void btncadastrar_Click(object sender, EventArgs e)
         {
@@ -125,6 +155,10 @@ namespace Sistema
             else if (txtcadvali.Text == "")
             {
                 MessageBox.Show("Obrigatorio preencher o campo 'VALIDADE' ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(txtcadvl.Text == "")
+            {
+                MessageBox.Show("Obrigatorio preencher o campo 'PREÇO' ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -150,6 +184,100 @@ namespace Sistema
         private void btniniciarcadastro_Click(object sender, EventArgs e)
         {
             caregarcadastro();
+        }
+
+        private void txtbuscarprod_TextChanged(object sender, EventArgs e)
+        {
+            if (txtbuscarprod.Text != "")
+            {
+                try
+                {
+                    cn.Open();
+                    cm.CommandText = "select * from tbl_produtos where nm_prod like ('%" + txtbuscarprod.Text + "%')";
+                    cm.Connection = cn;
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cm;
+                    da.Fill(dt);
+                    dtg.DataSource = dt;
+                    cn.Close();
+                }
+
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+                }
+
+            }
+            else
+            {
+                carregarprod();
+            }
+        }
+
+        private void dtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            carregaLinha();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("\nAgora os campos abaixo podem ser editados insira os novos dados\n" +
+                "Apos alterar os dados clique em 'Concluir Alteração'\n",
+                "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            habilitarcampos();
+        }
+
+        private void btnconcluiralt_Click(object sender, EventArgs e)
+        {
+
+            if (txtnomeprod.Text == "")
+            {
+                MessageBox.Show("Obrigatório preencher o campo 'NOME'", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtnomeprod.Focus();
+            }
+
+            else if (txtqtprod.Text == "")
+            {
+                MessageBox.Show("Obrigatório preencher o campo 'CEP'", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtqtprod.Focus();
+            }
+            else if (txtvaliprod.Text == "")
+            {
+                MessageBox.Show("Obrigatório preencher o campo 'NUMERO TELEFONE'", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtvaliprod.Focus();
+            }
+            else if (txtprecoprod.Text == "")
+            {
+                MessageBox.Show("Obrigatório preencher o campo 'NUMERO TELEFONE'", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtprecoprod.Focus();
+            }
+            else
+            {
+                try
+                {
+                    cn.Open();
+                    cm.CommandText = "update tbl_cliente set nm_cliente = @nmcli,rg_cliente = @rg,sx_cliente = @sx,no_cliente = @num,cep_cliente =@cep,endereço = @end,complemento = @comple,no_casa = @numcasa where rg_cliente = " + txtcdprod.Text;
+                    cm.Parameters.Add("@nmcli", SqlDbType.VarChar).Value = txtnomeprod.Text;
+                    cm.Parameters.Add("@rg", SqlDbType.VarChar).Value = txtqtprod.Text;
+                    cm.Parameters.Add("@sx", SqlDbType.VarChar).Value = txtvaliprod.Text;
+                    cm.Parameters.Add("@num", SqlDbType.VarChar).Value = txtprecoprod.Text;
+
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    MessageBox.Show("Dados Alterados com sucesso !!!", "Alteração Concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    desabilitarcampos();
+                    cm.Parameters.Clear();
+                    cn.Close();
+                }
+
+
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+                    cn.Close();
+                }
+            }
         }
     }
 }
