@@ -161,5 +161,11 @@ namespace Sistema
                 return;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Configuracao config = new Configuracao();
+            config.Show();
+        }
     }
 }

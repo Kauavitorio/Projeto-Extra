@@ -46,17 +46,14 @@ namespace Sistema
 
         private void escondercadastro()
         {
-            label1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            txtcadnome.Visible = false;
-            txtcadqt.Visible = false;
-            txtcadvl.Visible = false;
-            txtcadvali.Visible = false;
+            txtcadnome.Enabled = false;
+            txtcadqt.Enabled = false;
+            txtcadvl.Enabled = false;
+            txtcadvali.Enabled = false;
             btniniciarcadastro.Visible = true;
             btncadastrar.Visible = false;
         }
+
 
         private void Cadastrodeprodutos_Load(object sender, EventArgs e)
         {
@@ -102,15 +99,11 @@ namespace Sistema
         private void caregarcadastro()
         {
             btniniciarcadastro.Visible = false;
-            label1.Visible = true;
-            label2.Visible = true;
-            label3.Visible = true;
-            label4.Visible = true;
             btncadastrar.Visible = true;
-            txtcadnome.Visible = true;
-            txtcadqt.Visible = true;
-            txtcadvali.Visible = true;
-            txtcadvl.Visible = true;
+            txtcadnome.Enabled = true;
+            txtcadqt.Enabled = true;
+            txtcadvali.Enabled = true;
+            txtcadvl.Enabled = true;
         }
         private void carregaLinha()
         {
@@ -123,23 +116,32 @@ namespace Sistema
 
         private void habilitarcampos()
         {
-            txtnomeprod.ReadOnly = false;
-            txtcdprod.ReadOnly = false;
-            txtqtprod.ReadOnly = false;
-            txtvaliprod.ReadOnly = false;
-            txtprecoprod.ReadOnly = false;
+            txtnomeprod.Enabled = true;
+            txtcdprod.Enabled = false;
+            txtqtprod.Enabled = true;
+            txtvaliprod.Enabled = true;
+            txtprecoprod.Enabled = true;
             btniniciarcadastro.Visible = false;
             btnconcluiralt.Visible = true;
         }
         private void desabilitarcampos()
         {
-            txtnomeprod.ReadOnly = true;
-            txtcdprod.ReadOnly = true;
-            txtqtprod.ReadOnly = true;
-            txtvaliprod.ReadOnly = true;
-            txtprecoprod.ReadOnly = true;
+            txtnomeprod.Enabled = false;
+            txtcdprod.Enabled = false;
+            txtqtprod.Enabled = false;
+            txtvaliprod.Enabled = false;
+            txtprecoprod.Enabled = false;
             btniniciarcadastro.Visible = true;
             btnconcluiralt.Visible = false;
+        }
+
+        private void limparcampos()
+        {
+            txtnomeprod.Clear();
+            txtcdprod.Clear();
+            txtqtprod.Clear();
+            txtvaliprod.Clear();
+            txtprecoprod.Clear();
         }
 
         private void btncadastrar_Click(object sender, EventArgs e)
@@ -222,10 +224,17 @@ namespace Sistema
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("\nAgora os campos abaixo podem ser editados insira os novos dados\n" +
-                "Apos alterar os dados clique em 'Concluir Alteração'\n",
+            if(txtcdprod.Text == "") {
+                MessageBox.Show("É necessario selecionar um produto na lista!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("\nAgora os campos abaixo podem ser editados insira os novos dados\n" +
+                "Apos alterar os dados clique em 'Concluir Alteração'\nSó não é possivel alterar o código do produto",
                 "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            habilitarcampos();
+                habilitarcampos();
+            }
         }
 
         private void btnconcluiralt_Click(object sender, EventArgs e)
@@ -257,18 +266,20 @@ namespace Sistema
                 try
                 {
                     cn.Open();
-                    cm.CommandText = "update tbl_cliente set nm_cliente = @nmcli,rg_cliente = @rg,sx_cliente = @sx,no_cliente = @num,cep_cliente =@cep,endereço = @end,complemento = @comple,no_casa = @numcasa where rg_cliente = " + txtcdprod.Text;
-                    cm.Parameters.Add("@nmcli", SqlDbType.VarChar).Value = txtnomeprod.Text;
-                    cm.Parameters.Add("@rg", SqlDbType.VarChar).Value = txtqtprod.Text;
-                    cm.Parameters.Add("@sx", SqlDbType.VarChar).Value = txtvaliprod.Text;
-                    cm.Parameters.Add("@num", SqlDbType.VarChar).Value = txtprecoprod.Text;
+                    cm.CommandText = "update tbl_produtos set nm_prod = @nmprod,qtd_prod = @qtprod,dt_vali = @dtvaliprod,vl_produto = @vlprod where cd_prod = " + txtcdprod.Text;
+                    cm.Parameters.Add("@nmprod", SqlDbType.VarChar).Value = txtnomeprod.Text;
+                    cm.Parameters.Add("@qtprod", SqlDbType.Int).Value = txtqtprod.Text;
+                    cm.Parameters.Add("@dtvaliprod", SqlDbType.Date).Value = txtvaliprod.Text;
+                    cm.Parameters.Add("@vlprod", SqlDbType.Decimal).Value = txtprecoprod.Text;
 
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     MessageBox.Show("Dados Alterados com sucesso !!!", "Alteração Concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    desabilitarcampos();
                     cm.Parameters.Clear();
                     cn.Close();
+                    desabilitarcampos();
+                    carregarprod();
+                    limparcampos();
                 }
 
 
@@ -277,6 +288,55 @@ namespace Sistema
                     MessageBox.Show(erro.Message);
                     cn.Close();
                 }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            panel2.Width += 6;
+            if (panel2.Width >= 1366)
+            {
+                timer1.Stop();
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            panel4.Width += 6;
+            if (panel4.Width >= 1366)
+            {
+                timer2.Stop();
+            }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            panel6.Width += 2;
+            if (panel6.Width >= 10)
+            {
+                label11.Text = "Bem Vindo ao cadastro de produtos!!";
+            }
+            if (panel6.Width >= 50)
+            {
+                label11.Text = "Banco de dados operendo corretamente!!";
+            }
+            if (panel6.Width >= 90)
+            {
+                label12.Location = new Point(12, 639);
+                label11.Visible = false;
+                label12.Visible = true;
+            }
+            if (panel6.Width >= 120)
+            {
+                label12.Text = "Banco de dados conecdado em 'Rede Extra'...";
+            }
+            if (panel6.Width >= 160)
+            {
+                label12.Text = "Todas as alteraçoes que serão salvas para a Rede Extra";
+            }
+            if (panel6.Width >= 200)
+            {
+                label12.Visible = false;
             }
         }
     }

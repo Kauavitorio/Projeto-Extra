@@ -34,13 +34,13 @@
             this.btnsair = new System.Windows.Forms.Button();
             this.painellateral = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.btntema2 = new System.Windows.Forms.Button();
             this.btndesligaluz = new System.Windows.Forms.Button();
             this.btnajuda = new System.Windows.Forms.Button();
             this.paneldositens = new System.Windows.Forms.Panel();
             this.btncodigos = new System.Windows.Forms.Button();
             this.btnitens = new System.Windows.Forms.Button();
             this.btntrocarconta = new System.Windows.Forms.Button();
-            this.btntema2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btntema = new System.Windows.Forms.Button();
             this.alertzinho = new System.Windows.Forms.PictureBox();
@@ -141,7 +141,23 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Configuração";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btntema2
+            // 
+            this.btntema2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.btntema2.FlatAppearance.BorderSize = 0;
+            this.btntema2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntema2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntema2.ForeColor = System.Drawing.Color.Black;
+            this.btntema2.Location = new System.Drawing.Point(0, 566);
+            this.btntema2.Name = "btntema2";
+            this.btntema2.Size = new System.Drawing.Size(188, 42);
+            this.btntema2.TabIndex = 1;
+            this.btntema2.Text = "Tema Dark";
+            this.btntema2.UseVisualStyleBackColor = false;
+            this.btntema2.Visible = false;
+            this.btntema2.Click += new System.EventHandler(this.btntema2_Click_1);
             // 
             // btndesligaluz
             // 
@@ -237,22 +253,6 @@
             this.btntrocarconta.Text = "Trocar Conta";
             this.btntrocarconta.UseVisualStyleBackColor = false;
             this.btntrocarconta.Click += new System.EventHandler(this.btntrocarconta_Click);
-            // 
-            // btntema2
-            // 
-            this.btntema2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.btntema2.FlatAppearance.BorderSize = 0;
-            this.btntema2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntema2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntema2.ForeColor = System.Drawing.Color.Black;
-            this.btntema2.Location = new System.Drawing.Point(0, 566);
-            this.btntema2.Name = "btntema2";
-            this.btntema2.Size = new System.Drawing.Size(188, 42);
-            this.btntema2.TabIndex = 1;
-            this.btntema2.Text = "Tema Dark";
-            this.btntema2.UseVisualStyleBackColor = false;
-            this.btntema2.Visible = false;
-            this.btntema2.Click += new System.EventHandler(this.btntema2_Click_1);
             // 
             // pictureBox1
             // 

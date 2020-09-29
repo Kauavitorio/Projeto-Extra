@@ -40,6 +40,7 @@
             this.painellateral = new System.Windows.Forms.Panel();
             this.btnminimizar = new System.Windows.Forms.Button();
             this.painelprincipal = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.painelsuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.painellateral.SuspendLayout();
@@ -165,6 +166,7 @@
             // painellateral
             // 
             this.painellateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.painellateral.Controls.Add(this.button1);
             this.painellateral.Controls.Add(this.btntemadark);
             this.painellateral.Controls.Add(this.pictureBox1);
             this.painellateral.Controls.Add(this.btncadastrarprod);
@@ -201,6 +203,20 @@
             this.painelprincipal.Size = new System.Drawing.Size(1166, 743);
             this.painelprincipal.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 245);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 37);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Vendas";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // TelaGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,5 +251,6 @@
         private System.Windows.Forms.Button btnmini;
         private System.Windows.Forms.Button btnsai;
         private System.Windows.Forms.Panel painelprincipal;
+        private System.Windows.Forms.Button button1;
     }
 }

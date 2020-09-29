@@ -102,6 +102,10 @@ namespace Sistema
             {
                 label4.Text = "Consultando tabelas de daods...";
             }
+            if (panel2.Width >= 330)
+            {
+                label4.Text = "Daods recebidos...";
+            }
             if (panel2.Width >= 350)
             {
                 label4.Text = "Fechando conexão..";

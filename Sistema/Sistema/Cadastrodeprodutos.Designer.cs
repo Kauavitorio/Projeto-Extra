@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtg = new System.Windows.Forms.DataGridView();
             this.btniniciarcadastro = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +54,21 @@
             this.txtcdprod = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnconcluiralt = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtg
@@ -63,7 +78,7 @@
             this.dtg.Name = "dtg";
             this.dtg.ReadOnly = true;
             this.dtg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg.Size = new System.Drawing.Size(565, 247);
+            this.dtg.Size = new System.Drawing.Size(565, 484);
             this.dtg.TabIndex = 0;
             this.dtg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_CellContentClick);
             // 
@@ -93,7 +108,6 @@
             this.label1.Size = new System.Drawing.Size(123, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nome do Produto:";
-            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -105,7 +119,6 @@
             this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Quantidade:";
-            this.label2.Visible = false;
             // 
             // label3
             // 
@@ -117,31 +130,30 @@
             this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Validade:";
-            this.label3.Visible = false;
             // 
             // txtcadnome
             // 
             this.txtcadnome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtcadnome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcadnome.Enabled = false;
             this.txtcadnome.ForeColor = System.Drawing.Color.White;
             this.txtcadnome.Location = new System.Drawing.Point(156, 99);
             this.txtcadnome.Multiline = true;
             this.txtcadnome.Name = "txtcadnome";
             this.txtcadnome.Size = new System.Drawing.Size(158, 24);
             this.txtcadnome.TabIndex = 5;
-            this.txtcadnome.Visible = false;
             // 
             // txtcadqt
             // 
             this.txtcadqt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtcadqt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcadqt.Enabled = false;
             this.txtcadqt.ForeColor = System.Drawing.Color.White;
             this.txtcadqt.Location = new System.Drawing.Point(156, 129);
             this.txtcadqt.Multiline = true;
             this.txtcadqt.Name = "txtcadqt";
             this.txtcadqt.Size = new System.Drawing.Size(158, 24);
             this.txtcadqt.TabIndex = 6;
-            this.txtcadqt.Visible = false;
             // 
             // btncadastrar
             // 
@@ -164,6 +176,7 @@
             // 
             this.txtcadvali.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtcadvali.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcadvali.Enabled = false;
             this.txtcadvali.ForeColor = System.Drawing.Color.White;
             this.txtcadvali.Location = new System.Drawing.Point(156, 159);
             this.txtcadvali.Mask = "00/00/0000";
@@ -171,19 +184,18 @@
             this.txtcadvali.Size = new System.Drawing.Size(158, 20);
             this.txtcadvali.TabIndex = 9;
             this.txtcadvali.ValidatingType = typeof(System.DateTime);
-            this.txtcadvali.Visible = false;
             // 
             // txtcadvl
             // 
             this.txtcadvl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtcadvl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcadvl.Enabled = false;
             this.txtcadvl.ForeColor = System.Drawing.Color.White;
             this.txtcadvl.Location = new System.Drawing.Point(156, 188);
             this.txtcadvl.Multiline = true;
             this.txtcadvl.Name = "txtcadvl";
             this.txtcadvl.Size = new System.Drawing.Size(158, 24);
             this.txtcadvl.TabIndex = 11;
-            this.txtcadvl.Visible = false;
             // 
             // label4
             // 
@@ -195,7 +207,6 @@
             this.label4.Size = new System.Drawing.Size(48, 15);
             this.label4.TabIndex = 10;
             this.label4.Text = "Preço:";
-            this.label4.Visible = false;
             // 
             // label5
             // 
@@ -240,12 +251,12 @@
             // 
             this.txtprecoprod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtprecoprod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtprecoprod.Enabled = false;
             this.txtprecoprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprecoprod.ForeColor = System.Drawing.Color.White;
-            this.txtprecoprod.Location = new System.Drawing.Point(156, 602);
+            this.txtprecoprod.Location = new System.Drawing.Point(156, 612);
             this.txtprecoprod.Multiline = true;
             this.txtprecoprod.Name = "txtprecoprod";
-            this.txtprecoprod.ReadOnly = true;
             this.txtprecoprod.Size = new System.Drawing.Size(158, 24);
             this.txtprecoprod.TabIndex = 22;
             // 
@@ -254,7 +265,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(27, 602);
+            this.label6.Location = new System.Drawing.Point(27, 612);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 15);
             this.label6.TabIndex = 21;
@@ -264,12 +275,12 @@
             // 
             this.txtvaliprod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtvaliprod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtvaliprod.Enabled = false;
             this.txtvaliprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtvaliprod.ForeColor = System.Drawing.Color.White;
-            this.txtvaliprod.Location = new System.Drawing.Point(156, 573);
+            this.txtvaliprod.Location = new System.Drawing.Point(156, 583);
             this.txtvaliprod.Mask = "00/00/0000";
             this.txtvaliprod.Name = "txtvaliprod";
-            this.txtvaliprod.ReadOnly = true;
             this.txtvaliprod.Size = new System.Drawing.Size(158, 21);
             this.txtvaliprod.TabIndex = 20;
             this.txtvaliprod.ValidatingType = typeof(System.DateTime);
@@ -278,12 +289,12 @@
             // 
             this.txtqtprod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtqtprod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtqtprod.Enabled = false;
             this.txtqtprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtqtprod.ForeColor = System.Drawing.Color.White;
-            this.txtqtprod.Location = new System.Drawing.Point(156, 543);
+            this.txtqtprod.Location = new System.Drawing.Point(156, 553);
             this.txtqtprod.Multiline = true;
             this.txtqtprod.Name = "txtqtprod";
-            this.txtqtprod.ReadOnly = true;
             this.txtqtprod.Size = new System.Drawing.Size(158, 24);
             this.txtqtprod.TabIndex = 19;
             // 
@@ -291,13 +302,13 @@
             // 
             this.txtnomeprod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtnomeprod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtnomeprod.Enabled = false;
             this.txtnomeprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnomeprod.ForeColor = System.Drawing.Color.White;
             this.txtnomeprod.Location = new System.Drawing.Point(156, 513);
             this.txtnomeprod.Multiline = true;
             this.txtnomeprod.Name = "txtnomeprod";
-            this.txtnomeprod.ReadOnly = true;
-            this.txtnomeprod.Size = new System.Drawing.Size(254, 24);
+            this.txtnomeprod.Size = new System.Drawing.Size(270, 34);
             this.txtnomeprod.TabIndex = 18;
             // 
             // label7
@@ -305,7 +316,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(27, 573);
+            this.label7.Location = new System.Drawing.Point(27, 583);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 17;
@@ -316,7 +327,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(27, 543);
+            this.label8.Location = new System.Drawing.Point(27, 553);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 15);
             this.label8.TabIndex = 16;
@@ -337,12 +348,12 @@
             // 
             this.txtcdprod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.txtcdprod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcdprod.Enabled = false;
             this.txtcdprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcdprod.ForeColor = System.Drawing.Color.White;
             this.txtcdprod.Location = new System.Drawing.Point(156, 481);
             this.txtcdprod.Multiline = true;
             this.txtcdprod.Name = "txtcdprod";
-            this.txtcdprod.ReadOnly = true;
             this.txtcdprod.Size = new System.Drawing.Size(55, 24);
             this.txtcdprod.TabIndex = 24;
             // 
@@ -374,12 +385,107 @@
             this.btnconcluiralt.Visible = false;
             this.btnconcluiralt.Click += new System.EventHandler(this.btnconcluiralt_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1366, 8);
+            this.panel1.TabIndex = 26;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(76)))));
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(14, 8);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 760);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1366, 8);
+            this.panel3.TabIndex = 27;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(76)))));
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(14, 8);
+            this.panel4.TabIndex = 0;
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Location = new System.Drawing.Point(30, 316);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(446, 16);
+            this.panel5.TabIndex = 28;
+            this.panel5.Visible = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(76)))));
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(14, 16);
+            this.panel6.TabIndex = 0;
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(12, 639);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(495, 31);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Bem Vindo ao cadastro de produtos!!";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(14, 670);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(424, 24);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Qualquer duvida consulte o desenvolvedor!!";
+            this.label12.Visible = false;
+            // 
             // Cadastrodeprodutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnconcluiralt);
             this.Controls.Add(this.txtcdprod);
             this.Controls.Add(this.label10);
@@ -410,6 +516,9 @@
             this.Text = "Cadastrodeprodutos";
             this.Load += new System.EventHandler(this.Cadastrodeprodutos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,5 +551,16 @@
         private System.Windows.Forms.TextBox txtcdprod;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnconcluiralt;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
