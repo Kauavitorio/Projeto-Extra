@@ -81,6 +81,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="logindeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logindeveloper.Designer.cs">
+      <DependentUpon>logindeveloper.cs</DependentUpon>
+    </Compile>
     <Compile Include="logingerente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     <Compile Include="Teladesplash.Designer.cs">
       <DependentUpon>Teladesplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaDevs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaDevs.Designer.cs">
+      <DependentUpon>TelaDevs.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaGerente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logindeveloper.resx">
+      <DependentUpon>logindeveloper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="logingerente.resx">
       <DependentUpon>logingerente.cs</DependentUpon>

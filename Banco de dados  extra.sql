@@ -23,6 +23,18 @@ create table tbl_gerentes(
 		senha_gerente varchar(20) not null
 )
 
+create table tbl_devs(
+		cd_dev int primary key identity(1,1),
+		nm_dev varchar(50) not null,
+		serial_dev varchar(20) not null,
+		cpf_dev varchar(11) not null,
+		senha_dev varchar(20) not null
+)
+
+insert into tbl_devs
+(nm_dev,serial_dev,cpf_dev,senha_dev)
+values('Kauã Vitorio','43333349850','43333349850','kaua2004')
+
 insert into tbl_gerentes
 (nm_gerente,cpf_gerente,func_gerente,senha_gerente)
 values('Kauã Vitorio','43333349850','Developer','kaua2004')

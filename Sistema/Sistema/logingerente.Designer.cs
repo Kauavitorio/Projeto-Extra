@@ -42,6 +42,7 @@
             this.txtcargogerente = new System.Windows.Forms.TextBox();
             this.txtcpfgerente = new System.Windows.Forms.MaskedTextBox();
             this.btnlogar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -135,7 +136,7 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(133, 439);
+            this.label3.Location = new System.Drawing.Point(124, 423);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 16);
             this.label3.TabIndex = 6;
@@ -239,12 +240,26 @@
             this.btnlogar.UseVisualStyleBackColor = false;
             this.btnlogar.Click += new System.EventHandler(this.btnlogar_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(115, 439);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(215, 16);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Acessar como desenvolvedor";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // logingerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(439, 464);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnlogar);
             this.Controls.Add(this.txtcpfgerente);
             this.Controls.Add(this.txtcargogerente);
@@ -286,5 +301,6 @@
         private System.Windows.Forms.TextBox txtcargogerente;
         private System.Windows.Forms.MaskedTextBox txtcpfgerente;
         private System.Windows.Forms.Button btnlogar;
+        private System.Windows.Forms.Label label7;
     }
 }

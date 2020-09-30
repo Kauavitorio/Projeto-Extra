@@ -29,3 +29,4 @@ C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.cs
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.TelaGerente.resources
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.Cadastrodeprodutos.resources
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.Configuracao.resources
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.logindeveloper.resources

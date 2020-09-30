@@ -83,7 +83,7 @@ namespace Sistema
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
+                ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
