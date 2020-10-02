@@ -48,7 +48,7 @@ namespace Sistema
         {
             if (this.painelprincipal.Controls.Count > 0)
                 this.painelprincipal.Controls.RemoveAt(0);
-            Cadastrodeprodutos venda = formvenda as Cadastrodeprodutos;
+            Form venda = formvenda as Form;
             venda.TopLevel = false;
             venda.Dock = DockStyle.Fill;
             this.painelprincipal.Controls.Add(venda);
@@ -79,6 +79,11 @@ namespace Sistema
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            abrirjanela(new Funcionarios());
         }
     }
 }

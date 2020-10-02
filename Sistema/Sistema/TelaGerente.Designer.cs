@@ -38,10 +38,10 @@
             this.btncadastrarprod = new System.Windows.Forms.Button();
             this.btntemadark = new System.Windows.Forms.Button();
             this.painellateral = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnminimizar = new System.Windows.Forms.Button();
             this.painelprincipal = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.painelsuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.painellateral.SuspendLayout();
@@ -181,6 +181,21 @@
             this.painellateral.Size = new System.Drawing.Size(200, 743);
             this.painellateral.TabIndex = 1;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 288);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 37);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Funcionarios";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -218,20 +233,6 @@
             this.painelprincipal.Name = "painelprincipal";
             this.painelprincipal.Size = new System.Drawing.Size(1166, 743);
             this.painelprincipal.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 288);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 37);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Funcionarios";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // TelaGerente
             // 

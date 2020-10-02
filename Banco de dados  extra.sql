@@ -7,12 +7,14 @@ create table tbl_funcionario(
 		cd_func int primary key identity(1,1),
 		nm_func varchar(50) not null,
 		cpf_func varchar(11) not null,
-		idade_fnc varchar(50) not null,
+		idade_fnc varchar(3) not null,
 		nasc_func date,
 		dtcontrat_func date,
 		login_func varchar(20) not null,
 		senha_func varchar(20) not null
 )
+
+delete tbl_funcionario where cd_func = 1
 
 
 create table tbl_gerentes(
