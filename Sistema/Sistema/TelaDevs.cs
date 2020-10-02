@@ -16,5 +16,10 @@ namespace Sistema
         {
             InitializeComponent();
         }
+
+        private void btnsai_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

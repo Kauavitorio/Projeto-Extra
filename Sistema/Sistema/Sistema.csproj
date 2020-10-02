@@ -158,6 +158,9 @@
     <EmbeddedResource Include="Teladesplash.resx">
       <DependentUpon>Teladesplash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelaDevs.resx">
+      <DependentUpon>TelaDevs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaGerente.resx">
       <DependentUpon>TelaGerente.cs</DependentUpon>
     </EmbeddedResource>
