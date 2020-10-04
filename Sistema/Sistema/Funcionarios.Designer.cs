@@ -47,7 +47,6 @@
             this.dtg = new System.Windows.Forms.DataGridView();
             this.txtbuscarfunc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtcpffunc = new System.Windows.Forms.TextBox();
             this.txtsenha = new System.Windows.Forms.TextBox();
             this.txtlogin = new System.Windows.Forms.TextBox();
             this.txtcontra = new System.Windows.Forms.MaskedTextBox();
@@ -61,11 +60,13 @@
             this.lblidade = new System.Windows.Forms.Label();
             this.lblcpf = new System.Windows.Forms.Label();
             this.lblnome = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.MaskedTextBox();
             this.btninicioalter = new System.Windows.Forms.Button();
             this.txtcd = new System.Windows.Forms.TextBox();
             this.lblcd = new System.Windows.Forms.Label();
             this.lblavisoalter = new System.Windows.Forms.Label();
+            this.btnalter = new System.Windows.Forms.Button();
+            this.txtcpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtcpffunc = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -265,7 +266,7 @@
             // dtg
             // 
             this.dtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg.Location = new System.Drawing.Point(493, 63);
+            this.dtg.Location = new System.Drawing.Point(426, 71);
             this.dtg.Name = "dtg";
             this.dtg.ReadOnly = true;
             this.dtg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -295,20 +296,6 @@
             this.label1.Size = new System.Drawing.Size(155, 15);
             this.label1.TabIndex = 18;
             this.label1.Text = "Buscar um funcionário:";
-            // 
-            // txtcpffunc
-            // 
-            this.txtcpffunc.BackColor = System.Drawing.Color.Black;
-            this.txtcpffunc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtcpffunc.Enabled = false;
-            this.txtcpffunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcpffunc.ForeColor = System.Drawing.Color.White;
-            this.txtcpffunc.Location = new System.Drawing.Point(108, 92);
-            this.txtcpffunc.MaxLength = 11;
-            this.txtcpffunc.Multiline = true;
-            this.txtcpffunc.Name = "txtcpffunc";
-            this.txtcpffunc.Size = new System.Drawing.Size(201, 23);
-            this.txtcpffunc.TabIndex = 2;
             // 
             // txtsenha
             // 
@@ -475,20 +462,6 @@
             this.lblnome.Text = "Nome:";
             this.lblnome.Visible = false;
             // 
-            // txtcpf
-            // 
-            this.txtcpf.BackColor = System.Drawing.Color.Black;
-            this.txtcpf.Enabled = false;
-            this.txtcpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcpf.ForeColor = System.Drawing.Color.White;
-            this.txtcpf.Location = new System.Drawing.Point(108, 571);
-            this.txtcpf.Mask = "000.000.000-00";
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(201, 22);
-            this.txtcpf.TabIndex = 33;
-            this.txtcpf.ValidatingType = typeof(System.DateTime);
-            this.txtcpf.Visible = false;
-            // 
             // btninicioalter
             // 
             this.btninicioalter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
@@ -503,6 +476,7 @@
             this.btninicioalter.Text = "Iniciar Alteração";
             this.btninicioalter.UseVisualStyleBackColor = false;
             this.btninicioalter.Visible = false;
+            this.btninicioalter.Click += new System.EventHandler(this.btninicioalter_Click);
             // 
             // txtcd
             // 
@@ -534,11 +508,53 @@
             // 
             this.lblavisoalter.AutoSize = true;
             this.lblavisoalter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblavisoalter.Location = new System.Drawing.Point(489, 551);
+            this.lblavisoalter.Location = new System.Drawing.Point(422, 558);
             this.lblavisoalter.Name = "lblavisoalter";
             this.lblavisoalter.Size = new System.Drawing.Size(469, 24);
             this.lblavisoalter.TabIndex = 37;
             this.lblavisoalter.Text = "Para alterar algum dado selecione o funcionario!!";
+            // 
+            // btnalter
+            // 
+            this.btnalter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.btnalter.FlatAppearance.BorderSize = 0;
+            this.btnalter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnalter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnalter.ForeColor = System.Drawing.Color.White;
+            this.btnalter.Location = new System.Drawing.Point(38, 461);
+            this.btnalter.Name = "btnalter";
+            this.btnalter.Size = new System.Drawing.Size(271, 41);
+            this.btnalter.TabIndex = 38;
+            this.btnalter.Text = "Alterar";
+            this.btnalter.UseVisualStyleBackColor = false;
+            this.btnalter.Visible = false;
+            this.btnalter.Click += new System.EventHandler(this.btnalter_Click);
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.BackColor = System.Drawing.Color.Black;
+            this.txtcpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcpf.Enabled = false;
+            this.txtcpf.ForeColor = System.Drawing.Color.White;
+            this.txtcpf.Location = new System.Drawing.Point(108, 574);
+            this.txtcpf.Mask = "000.000.000-00";
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(201, 20);
+            this.txtcpf.TabIndex = 40;
+            this.txtcpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtcpf.Visible = false;
+            // 
+            // txtcpffunc
+            // 
+            this.txtcpffunc.BackColor = System.Drawing.Color.Black;
+            this.txtcpffunc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcpffunc.ForeColor = System.Drawing.Color.White;
+            this.txtcpffunc.Location = new System.Drawing.Point(108, 94);
+            this.txtcpffunc.Mask = "000.000.000-00";
+            this.txtcpffunc.Name = "txtcpffunc";
+            this.txtcpffunc.Size = new System.Drawing.Size(201, 20);
+            this.txtcpffunc.TabIndex = 41;
+            this.txtcpffunc.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // Funcionarios
             // 
@@ -546,11 +562,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.txtcpffunc);
+            this.Controls.Add(this.txtcpf);
+            this.Controls.Add(this.btnalter);
             this.Controls.Add(this.lblavisoalter);
             this.Controls.Add(this.txtcd);
             this.Controls.Add(this.lblcd);
             this.Controls.Add(this.btninicioalter);
-            this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.txtsenha);
             this.Controls.Add(this.txtlogin);
             this.Controls.Add(this.txtcontra);
@@ -564,7 +582,6 @@
             this.Controls.Add(this.lblidade);
             this.Controls.Add(this.lblcpf);
             this.Controls.Add(this.lblnome);
-            this.Controls.Add(this.txtcpffunc);
             this.Controls.Add(this.txtbuscarfunc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtg);
@@ -617,7 +634,6 @@
         private System.Windows.Forms.DataGridView dtg;
         private System.Windows.Forms.TextBox txtbuscarfunc;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtcpffunc;
         private System.Windows.Forms.TextBox txtsenha;
         private System.Windows.Forms.TextBox txtlogin;
         private System.Windows.Forms.MaskedTextBox txtcontra;
@@ -631,10 +647,12 @@
         private System.Windows.Forms.Label lblidade;
         private System.Windows.Forms.Label lblcpf;
         private System.Windows.Forms.Label lblnome;
-        private System.Windows.Forms.MaskedTextBox txtcpf;
         private System.Windows.Forms.Button btninicioalter;
         private System.Windows.Forms.TextBox txtcd;
         private System.Windows.Forms.Label lblcd;
         private System.Windows.Forms.Label lblavisoalter;
+        private System.Windows.Forms.Button btnalter;
+        private System.Windows.Forms.MaskedTextBox txtcpf;
+        private System.Windows.Forms.MaskedTextBox txtcpffunc;
     }
 }

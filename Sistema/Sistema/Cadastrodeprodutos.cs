@@ -239,7 +239,6 @@ namespace Sistema
 
         private void btnconcluiralt_Click(object sender, EventArgs e)
         {
-
             if (txtnomeprod.Text == "")
             {
                 MessageBox.Show("Obrigatório preencher o campo 'NOME'", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -24,12 +24,14 @@ namespace Sistema
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            MessageBox.Show("Por motivos de segurança e estabilidade o sistema será reiniciado!!\nApós o reinicio pode continuar o uso normalmente!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            Application.Restart();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            MessageBox.Show("Por motivos de segurança e estabilidade o sistema será reiniciado!!\nApós o reinicio pode continuar o uso normalmente!!", "Aviso",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            Application.Restart();
         }
 
         private void habilitacampos()
@@ -227,7 +229,7 @@ namespace Sistema
             }
             if (panel3.Width >= 114)
             {
-                txtserial.PasswordChar = '@';
+                txtserial.PasswordChar = '.';
             }
             if (panel3.Width >= 117)
             {
