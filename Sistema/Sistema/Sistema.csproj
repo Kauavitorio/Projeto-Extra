@@ -107,6 +107,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeladeCodigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeladeCodigos.Designer.cs">
+      <DependentUpon>TeladeCodigos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teladesplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TeladeCodigos.resx">
+      <DependentUpon>TeladeCodigos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teladesplash.resx">
       <DependentUpon>Teladesplash.cs</DependentUpon>
     </EmbeddedResource>

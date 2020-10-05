@@ -125,6 +125,8 @@ namespace Sistema
         private void btncodigos_Click(object sender, EventArgs e)
         {
             paneldositens.Visible = false;
+            TeladeCodigos telacd = new TeladeCodigos();
+            telacd.Show();
         }
 
         private void txtidprod_TextChanged(object sender, EventArgs e)

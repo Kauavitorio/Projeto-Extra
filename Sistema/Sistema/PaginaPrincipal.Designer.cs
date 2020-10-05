@@ -196,7 +196,7 @@
             // 
             this.paneldositens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.paneldositens.Controls.Add(this.btncodigos);
-            this.paneldositens.Location = new System.Drawing.Point(0, 225);
+            this.paneldositens.Location = new System.Drawing.Point(0, 213);
             this.paneldositens.Name = "paneldositens";
             this.paneldositens.Size = new System.Drawing.Size(188, 110);
             this.paneldositens.TabIndex = 9;
@@ -232,7 +232,7 @@
             this.btnitens.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnitens.Location = new System.Drawing.Point(0, 170);
             this.btnitens.Name = "btnitens";
-            this.btnitens.Size = new System.Drawing.Size(188, 54);
+            this.btnitens.Size = new System.Drawing.Size(188, 49);
             this.btnitens.TabIndex = 10;
             this.btnitens.Text = "Itens";
             this.btnitens.UseVisualStyleBackColor = false;
@@ -284,7 +284,7 @@
             this.alertzinho.Image = ((System.Drawing.Image)(resources.GetObject("alertzinho.Image")));
             this.alertzinho.Location = new System.Drawing.Point(194, 28);
             this.alertzinho.Name = "alertzinho";
-            this.alertzinho.Size = new System.Drawing.Size(60, 60);
+            this.alertzinho.Size = new System.Drawing.Size(54, 57);
             this.alertzinho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.alertzinho.TabIndex = 11;
             this.alertzinho.TabStop = false;
