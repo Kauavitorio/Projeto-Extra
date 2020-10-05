@@ -169,5 +169,11 @@ namespace Sistema
             Configuracao config = new Configuracao();
             config.Show();
         }
+
+        private void btnbaterponto_Click(object sender, EventArgs e)
+        {
+            BaterPontoFunc baterPonto = new BaterPontoFunc();
+            baterPonto.Show();
+        }
     }
 }

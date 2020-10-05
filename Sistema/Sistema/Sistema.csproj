@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaterPontoFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaterPontoFunc.Designer.cs">
+      <DependentUpon>BaterPontoFunc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastrodeprodutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="TelaGerente.Designer.cs">
       <DependentUpon>TelaGerente.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaterPontoFunc.resx">
+      <DependentUpon>BaterPontoFunc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastrodeprodutos.resx">
       <DependentUpon>Cadastrodeprodutos.cs</DependentUpon>
     </EmbeddedResource>

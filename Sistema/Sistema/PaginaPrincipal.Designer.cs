@@ -54,6 +54,7 @@
             this.PainelPrincipal = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnfinalizarcompra = new System.Windows.Forms.Button();
+            this.btnbaterponto = new System.Windows.Forms.Button();
             this.painelsuperior.SuspendLayout();
             this.painellateral.SuspendLayout();
             this.paneldositens.SuspendLayout();
@@ -112,6 +113,7 @@
             // painellateral
             // 
             this.painellateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.painellateral.Controls.Add(this.btnbaterponto);
             this.painellateral.Controls.Add(this.button1);
             this.painellateral.Controls.Add(this.btntema2);
             this.painellateral.Controls.Add(this.btndesligaluz);
@@ -129,7 +131,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,13 +163,13 @@
             // 
             // btndesligaluz
             // 
-            this.btndesligaluz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btndesligaluz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.btndesligaluz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btndesligaluz.FlatAppearance.BorderSize = 0;
             this.btndesligaluz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndesligaluz.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndesligaluz.ForeColor = System.Drawing.Color.White;
-            this.btndesligaluz.Location = new System.Drawing.Point(0, 496);
+            this.btndesligaluz.Location = new System.Drawing.Point(-3, 496);
             this.btndesligaluz.Name = "btndesligaluz";
             this.btndesligaluz.Size = new System.Drawing.Size(188, 55);
             this.btndesligaluz.TabIndex = 12;
@@ -178,7 +180,7 @@
             // 
             // btnajuda
             // 
-            this.btnajuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnajuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.btnajuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnajuda.FlatAppearance.BorderSize = 0;
             this.btnajuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -204,7 +206,7 @@
             // 
             // btncodigos
             // 
-            this.btncodigos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btncodigos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.btncodigos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btncodigos.FlatAppearance.BorderSize = 0;
             this.btncodigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -222,7 +224,7 @@
             // 
             // btnitens
             // 
-            this.btnitens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnitens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.btnitens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnitens.FlatAppearance.BorderSize = 0;
             this.btnitens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -240,7 +242,7 @@
             // 
             // btntrocarconta
             // 
-            this.btntrocarconta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btntrocarconta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.btntrocarconta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btntrocarconta.FlatAppearance.BorderSize = 0;
             this.btntrocarconta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -266,7 +268,7 @@
             // 
             // btntema
             // 
-            this.btntema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btntema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.btntema.FlatAppearance.BorderSize = 0;
             this.btntema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -418,6 +420,22 @@
             this.btnfinalizarcompra.Text = "Finalizar Compra";
             this.btnfinalizarcompra.UseVisualStyleBackColor = false;
             // 
+            // btnbaterponto
+            // 
+            this.btnbaterponto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.btnbaterponto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnbaterponto.FlatAppearance.BorderSize = 0;
+            this.btnbaterponto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbaterponto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbaterponto.ForeColor = System.Drawing.Color.White;
+            this.btnbaterponto.Location = new System.Drawing.Point(-3, 453);
+            this.btnbaterponto.Name = "btnbaterponto";
+            this.btnbaterponto.Size = new System.Drawing.Size(188, 37);
+            this.btnbaterponto.TabIndex = 14;
+            this.btnbaterponto.Text = "Bater Ponto";
+            this.btnbaterponto.UseVisualStyleBackColor = false;
+            this.btnbaterponto.Click += new System.EventHandler(this.btnbaterponto_Click);
+            // 
             // PaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,5 +487,6 @@
         private System.Windows.Forms.Button btnfinalizarcompra;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnbaterponto;
     }
 }

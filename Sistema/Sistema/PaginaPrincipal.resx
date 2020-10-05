@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btncodigos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAPBJREFUSEtj
-        GAWjYBQMP3DM3V3ojLf3ibM+Ptdohc94eZ2BWgcB/xsamE57ex99XVPz93t//39a4Qv+/s+hVkIA0NK+
-        R9nZn7EppiZGsfi0m5vnlbCwN9/7+rAqpiaGW3zUyUn+nJ/f8y/d3VgVUhuDLd7v4MABjOxr75uaUCR/
-        LFjw//fBg2Ca2uJgi896e699Wlr6A1kxCP/78OE/CIBoaosjLC4qor/FOIN6/nxIEAFpaovDE9cRFxc5
-        uicuGDjl7u5B9+wEA8CisudBdvZHbIqpiTEsRioy/2DTQC2MYTEIDEglMQpGwSgYgoCBAQAIHYZHP3rB
-        NgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btnitens.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAOxJREFUSEtj
@@ -586,6 +576,16 @@
         Zrj1ycde9DB5wYUPGP7D8D4jJ/1Oe8H5v6y94Nz/qbzw3M+rx6z6rHr0ik8qRy3fIB85dkPx8PyHJ5em
         3713SfKc3YPx8Z390eQTkeEzt0eGT9keGXnpY+GhFz8xGOvAa6svWPD/AY8hLBcoB1tVAAAAAElFTkSu
         QmCC
+</value>
+  </data>
+  <data name="btncodigos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAPBJREFUSEtj
+        GAWjYBQMP3DM3V3ojLf3ibM+Ptdohc94eZ2BWgcB/xsamE57ex99XVPz93t//39a4Qv+/s+hVkIA0NK+
+        R9nZn7EppiZGsfi0m5vnlbCwN9/7+rAqpiaGW3zUyUn+nJ/f8y/d3VgVUhuDLd7v4MABjOxr75uaUCR/
+        LFjw//fBg2Ca2uJgi896e699Wlr6A1kxCP/78OE/CIBoaosjLC4qor/FOIN6/nxIEAFpaovDE9cRFxc5
+        uicuGDjl7u5B9+wEA8CisudBdvZHbIqpiTEsRioy/2DTQC2MYTEIDEglMQpGwSgYgoCBAQAIHYZHP3rB
+        NgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="alertzinho.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

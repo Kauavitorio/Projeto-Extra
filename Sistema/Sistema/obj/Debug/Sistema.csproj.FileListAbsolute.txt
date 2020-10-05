@@ -33,3 +33,4 @@ C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.lo
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.Funcionarios.resources
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.TelaDevs.resources
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.TeladeCodigos.resources
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.BaterPontoFunc.resources
