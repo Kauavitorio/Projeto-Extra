@@ -368,6 +368,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(606, 294);
             this.Name = "logindeveloper";
             this.Text = "logindeveloper";
             this.panel2.ResumeLayout(false);
