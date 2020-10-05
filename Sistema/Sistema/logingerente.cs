@@ -119,6 +119,7 @@ namespace Sistema
                 finally
                 {
                     nomegerente();
+                    cn.Close();
                 }
             }
         }
