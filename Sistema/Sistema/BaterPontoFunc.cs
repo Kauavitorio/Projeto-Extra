@@ -74,7 +74,7 @@ namespace Sistema
             txtnome.Enabled = false;
             btnfecharponto.Visible = false;
             txtdata.Text = DateTime.Now.ToShortDateString();
-            txthrentra.Text = DateTime.Now.ToShortTimeString();
+            txthrentra.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void desabilitarnovoponto()
@@ -176,6 +176,17 @@ namespace Sistema
 
         }
 
+        private void limparcampos()
+        {
+            txtcd.Clear();
+            txtcdponto.Clear();
+            txtdata.Clear();
+            txtfiltro.Clear();
+            txthrentra.Clear();
+            txtnome.Clear();
+            txthrsaida.Clear();
+        }
+
         private void BaterPontoFunc_Load(object sender, EventArgs e)
         {
             label1.Location = new Point(76, 175);
@@ -235,6 +246,7 @@ namespace Sistema
                     cn.Close();
                     carregarpontos();
                     desabilitarnovoponto();
+                    limparcampos();
                 }
             }
         }
@@ -333,6 +345,7 @@ namespace Sistema
                     cn.Close();
                     carregarpontos();
                     desabilitafechamento();
+                    limparcampos();
                 }
 
 
