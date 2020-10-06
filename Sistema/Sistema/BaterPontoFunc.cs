@@ -372,5 +372,10 @@ namespace Sistema
                 carregarpontos();
             }
         }
+
+        private void lblfiltro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnminimizar = new System.Windows.Forms.Button();
             this.painelprincipal = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.painelsuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.painellateral.SuspendLayout();
@@ -167,6 +168,7 @@
             // painellateral
             // 
             this.painellateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.painellateral.Controls.Add(this.button3);
             this.painellateral.Controls.Add(this.button2);
             this.painellateral.Controls.Add(this.button1);
             this.painellateral.Controls.Add(this.btntemadark);
@@ -234,6 +236,21 @@
             this.painelprincipal.Size = new System.Drawing.Size(1166, 743);
             this.painelprincipal.TabIndex = 2;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 331);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 37);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Pontos";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // TelaGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,5 +287,6 @@
         private System.Windows.Forms.Panel painelprincipal;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

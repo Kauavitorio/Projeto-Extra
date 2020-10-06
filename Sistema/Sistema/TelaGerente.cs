@@ -85,5 +85,11 @@ namespace Sistema
         {
             abrirjanela(new Funcionarios());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BaterPontoGerente baterPontoGerente = new BaterPontoGerente();
+            baterPontoGerente.Show();
+        }
     }
 }

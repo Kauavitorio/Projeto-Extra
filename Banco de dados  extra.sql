@@ -60,6 +60,21 @@ create table tbl_produtos(
 		vl_produto decimal (10,2) not null
 )
 
+
+create table tbl_baterponto(
+		cd_func varchar(4),
+		nm_func varchar(50) not null,
+		dt_ponto date,
+		hr_entra time,
+		hr_saida time,
+		cd_ponto int primary key identity(1,1)
+)
+
+insert into tbl_baterponto
+(cd_func,nm_func,dt_ponto,hr_entra,hr_saida)
+values('2','P','04/10/2020','13:47:32','16:30:01')
+
+
 insert into tbl_produtos
 (nm_prod,qtd_prod,dt_vali,vl_produto)
 values('Néctar Del Valle Uva 1L','55','15/01/2021','4.12')
