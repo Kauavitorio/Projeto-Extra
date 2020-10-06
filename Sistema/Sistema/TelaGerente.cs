@@ -91,5 +91,10 @@ namespace Sistema
             BaterPontoGerente baterPontoGerente = new BaterPontoGerente();
             baterPontoGerente.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            abrirjanela(new CadastrodenovoGerente());
+        }
     }
 }

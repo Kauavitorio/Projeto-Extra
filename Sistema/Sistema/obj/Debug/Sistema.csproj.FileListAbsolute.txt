@@ -35,3 +35,4 @@ C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.Te
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.TeladeCodigos.resources
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.BaterPontoFunc.resources
 C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.BaterPontoGerente.resources
+C:\Users\Kaua Vitorio\Desktop\Projeto extra\Sistema\Sistema\obj\Debug\Sistema.CadastrodenovoGerente.resources

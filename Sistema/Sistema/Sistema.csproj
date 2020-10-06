@@ -75,6 +75,12 @@
     <Compile Include="BaterPontoGerente.Designer.cs">
       <DependentUpon>BaterPontoGerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastrodenovoGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrodenovoGerente.Designer.cs">
+      <DependentUpon>CadastrodenovoGerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastrodeprodutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaterPontoGerente.resx">
       <DependentUpon>BaterPontoGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrodenovoGerente.resx">
+      <DependentUpon>CadastrodenovoGerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastrodeprodutos.resx">
       <DependentUpon>Cadastrodeprodutos.cs</DependentUpon>
