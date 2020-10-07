@@ -365,6 +365,10 @@ namespace Sistema
 
         }
 
+        //  Aqui estou dizendo que quando precionar o botão de salvar o fechamento de ponto ele ira execultar alguns comandos:
+        //  Fazer a verificação se as textbox não estão vazias e logo apos atualizar a telaba(banco de dados)(dtg)com os novos dados
+
+
         private void btnsalavarfechamento_Click(object sender, EventArgs e)
         {
             if (txtcdponto.Text == "")
