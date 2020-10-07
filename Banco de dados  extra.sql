@@ -1,3 +1,8 @@
+--  Copyright (c) 2020 Kauã Vitório
+--  GitHub repositorio: https://github.com/Kauavitorio/Projeto-Extra
+--  Não esqueça de preencher as informaçoes do seu banco de dados nas conexões dentro do projetos csharp
+
+	
 	create database db_redeextra;
 
 
@@ -77,3 +82,8 @@ delete from tbl_gerentes  where cd_gerente = 5
 
 select * from tbl_gerentes
 select * from tbl_funcionario
+
+
+--  Copyright (c) 2020 Kauã Vitório
+--  GitHub repositorio: https://github.com/Kauavitorio/Projeto-Extra
+--  Não esqueça de preencher as informaçoes do seu banco de dados nas conexões dentro do projetos csharp

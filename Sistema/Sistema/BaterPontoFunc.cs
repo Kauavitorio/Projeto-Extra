@@ -301,6 +301,11 @@ namespace Sistema
             }
         }
 
+        //  Aqui estou dizendo que quando haver mudança no conteudo de dentro da textbox codigo ou seja quando escrever algo dentro dela
+        //  Ela ira verificar se oque você escreveu é maior ou igual a 1 e en seguida
+        //  Pegar no banco de dados o funcionario que estiver com o codigo relacionado com o que você inseriu e ira preencher as textbox de nome com o nome do funcionario correspondente
+        //  Caso não haja nenhum funcionario com o codigo destinado ele ira enviar uma mensagem e limpar a textbox de codigo e focar nela e logo apos fechar a conexao com o banco de dados
+
         private void txtcd_TextChanged(object sender, EventArgs e)
         {
             if (txtcd.Text.Length >= 1)
@@ -343,6 +348,9 @@ namespace Sistema
             }
         }
 
+        //  Aqui estou dizendo que quando clicar no botão de fechar o ponto ele ira verificar se a textbox de codigo de ponto esta vazia
+        //  Caso ela esteja ele ira enviar uma mensagem e executar o metodo "comecarfechamento()"
+
         private void btnfecharponto_Click(object sender, EventArgs e)
         {
             if(txtcdponto.Text == "")
@@ -351,6 +359,10 @@ namespace Sistema
                 comecarfechamento();
             }
         }
+
+        //  Aqui estou dizendo que quando eu clicar em alguma linha do banco de dados ele ira verificar se a textbox de codigo de ponto esta visivel
+        //  Se ela estiver invisivel ele ira enviar uma mensagem
+        //  Se ela estiver visivel ele ira realizar o metodo "carregaLinha()"
 
         private void dtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -367,6 +379,7 @@ namespace Sistema
 
         //  Aqui estou dizendo que quando precionar o botão de salvar o fechamento de ponto ele ira execultar alguns comandos:
         //  Fazer a verificação se as textbox não estão vazias e logo apos atualizar a telaba(banco de dados)(dtg)com os novos dados
+        //  Logo apos ele chama alguns metodos "carregarpontos()" para atualizar a tabela, "carregarpontos()" e "limparcampos()"
 
 
         private void btnsalavarfechamento_Click(object sender, EventArgs e)
