@@ -1,0 +1,29 @@
+BaterPontoFunc - Em andamento
+
+BaterPontoGerente - Ainda não iniciado
+
+CadastrodenovoGerente - Ainda não iniciado
+
+Cadastodeprodutos - Ainda não iniciado
+
+Configuracao - Ainda não iniciado
+
+Form1(login dos func) - Ainda não iniciado
+
+Funcionarios - Ainda não iniciado
+
+Logindeveloper - Ainda não iniciado
+
+LoginGerente - Ainda não iniciado
+
+PaginaPrincipal - Ainda não iniciado
+
+TeladeCodigos - Ainda não iniciado
+
+Teladesplash - Ainda não iniciado
+
+TelaDevs - Ainda não iniciado
+
+TelaGerente - Ainda não iniciado
+
+Banco De Dados - Em andamento

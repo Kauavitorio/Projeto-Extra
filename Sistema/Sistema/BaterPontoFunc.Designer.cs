@@ -132,7 +132,6 @@
             this.lblfiltro.TabIndex = 13;
             this.lblfiltro.Text = "Insira seu código:";
             this.lblfiltro.Visible = false;
-            this.lblfiltro.Click += new System.EventHandler(this.lblfiltro_Click);
             // 
             // txtfiltro
             // 

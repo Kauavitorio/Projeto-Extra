@@ -35,21 +35,15 @@ create table tbl_devs(
 
 insert into tbl_devs
 (nm_dev,serial_dev,cpf_dev,senha_dev)
-values('Kauã Vitorio','43333349850','43333349850','kaua2004')
+values(' Insira um Nome aqui','Insira um numero para ser o serial','Insira um cpf aqui','Insira uma senha aqui')
 
 insert into tbl_gerentes
 (nm_gerente,cpf_gerente,func_gerente,senha_gerente)
-values('Kauã Vitorio','43333349850','Developer','kaua2004')
-
-insert into tbl_gerentes
-(nm_gerente,cpf_gerente,func_gerente,senha_gerente)
-values('Valentim Diniz','00000000000','CEO','valentim123')
-
-
+values('Insira um nome aqui','Insira um cpf aqui','Insira uma função aqui','Insira uma senha aqui')
 
 insert into tbl_funcionario
 (nm_func,cpf_func,idade_fnc,nasc_func,dtcontrat_func,login_func,senha_func)
-values('Kauã Vitorio','43333349850','16','31/05/2004','27/09/2020','kaua123','kaua123')
+values('Insira um nome aqui','Insira um cpf aqui','Insira uma idade aqui','Insira uma data de nascimento aqui','Insira uma data de contratação aqui','Insira um login aqui','Insira uma senha aqui')
 
 
 create table tbl_produtos(
@@ -72,12 +66,14 @@ create table tbl_baterponto(
 
 insert into tbl_baterponto
 (cd_func,nm_func,dt_ponto,hr_entra,hr_saida)
-values('2','P','04/10/2020','13:47:32','16:30:01')
+values('Insira um codigo aqui','Insira um nome aqui','Insira uma data aqui','Insira uma hora aqui','Insira uma hora aqui')
 
 
 insert into tbl_produtos
 (nm_prod,qtd_prod,dt_vali,vl_produto)
-values('Néctar Del Valle Uva 1L','55','15/01/2021','4.12')
+values('Insira um nome de produto aqui','Insira uma quantidade de estoque aqui','Insira um data aqui','Insira o valor aqui')
+
+delete from tbl_gerentes  where cd_gerente = 5
 
 select * from tbl_gerentes
 select * from tbl_funcionario
