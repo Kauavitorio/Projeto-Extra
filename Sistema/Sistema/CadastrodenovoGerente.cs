@@ -20,7 +20,7 @@ namespace Sistema
         SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-I8J3S4E\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_redeextra");
         SqlCommand cm = new SqlCommand();
         SqlDataReader lerdados;
-        
+
         private void carregargerent()
         {
             try
@@ -77,6 +77,7 @@ namespace Sistema
             btniniciocadas.Visible = false;
             ckeckgeregeral.Enabled = true;
             ckeckgerecaixa.Enabled = true;
+            btndeletar.Visible = false;
             txtidfuncionariogere.Focus();
         }
 
@@ -96,6 +97,7 @@ namespace Sistema
             txtnomegere.Enabled = false;
             btncadastrar.Visible = false;
             btniniciocadas.Visible = true;
+            btndeletar.Visible = true;
         }
 
         private void CadastrodenovoGerente_Load(object sender, EventArgs e)
@@ -104,6 +106,7 @@ namespace Sistema
             carregarfunc();
 
             //Tabela Funcionarios
+
             dtgfunc.DefaultCellStyle.ForeColor = Color.White;
             dtgfunc.RowsDefaultCellStyle.BackColor = Color.Black;
             dtgfunc.BackgroundColor = Color.Black;
@@ -114,7 +117,7 @@ namespace Sistema
             dtgfunc.Columns[4].HeaderText = "Nascimento";
             dtgfunc.Columns[5].HeaderText = "Contratação";
             dtgfunc.Columns[6].HeaderText = "login";
-            dtgfunc.Columns[7].HeaderText ="Senha";
+            dtgfunc.Columns[7].HeaderText = "Senha";
 
             //Tabela Gerentes
 
@@ -126,6 +129,31 @@ namespace Sistema
             dtg.Columns[2].HeaderText = "CPF";
             dtg.Columns[3].HeaderText = "Função";
             dtg.Columns[4].HeaderText = "Senha";
+        }
+
+        private void carregaLinha()
+        {
+            ckeckgeregeral.Enabled = true;
+            ckeckgerecaixa.Enabled = true;
+            txtidparadeletar.Text = dtg.SelectedRows[0].Cells[0].Value.ToString();
+            txtnomegere.Text = dtg.SelectedRows[0].Cells[1].Value.ToString();
+            txtcpfgere.Text = dtg.SelectedRows[0].Cells[2].Value.ToString();
+            txtgambiara.Text = dtg.SelectedRows[0].Cells[3].Value.ToString();
+            txtsenhagere.Text = dtg.SelectedRows[0].Cells[4].Value.ToString();
+            if(txtgambiara.Text == "Gerente Geral")
+            {
+                ckeckgeregeral.Checked = true;
+            }
+            else if (txtgambiara.Text == "Gerente de Caixa")
+            {
+                ckeckgerecaixa.Checked = true;
+            }
+            if((txtgambiara.Text != "Gerente Geral") && (txtgambiara.Text != "Gerente de Caixa"))
+            {
+                MessageBox.Show("Esse é um cargo superior ao de gerente\nContate um desenvolvedor ou propriatario!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                limpatudo();
+                return;
+            }
         }
 
         private void txtidfuncionariogere_TextChanged(object sender, EventArgs e)
@@ -181,7 +209,7 @@ namespace Sistema
 
         private void ckeckgeregeral_CheckedChanged(object sender, EventArgs e)
         {
-            if(ckeckgeregeral.Checked == true)
+            if (ckeckgeregeral.Checked == true)
             {
                 ckeckgerecaixa.Enabled = false;
                 txtsenhagere.Focus();
@@ -211,10 +239,7 @@ namespace Sistema
 
         private void txtsenhagere_TextChanged(object sender, EventArgs e)
         {
-            if(txtsenhagere.TextLength == 20)
-            {
-                MessageBox.Show("A senha só pode conter no maximo 20 caracteres", "Opss..", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
         }
 
         private void btncadastrar_Click(object sender, EventArgs e)
@@ -229,10 +254,10 @@ namespace Sistema
             }
             else if (txtgambiara.Text == "")
             {
-               
+
                 MessageBox.Show("Obrigatorio selecionar a função ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if(txtsenhagere.Text == "")
+            else if (txtsenhagere.Text == "")
             {
                 MessageBox.Show("Obrigatorio informar a senha do novo gerente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -253,6 +278,54 @@ namespace Sistema
                     limpatudo();
                 }
             }
+        }
+
+        private void dtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            limpatudo();
+            carregaLinha();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(txtidparadeletar.Text == "")
+            {
+                MessageBox.Show("Selecione um gerente para a exclusão", "Alteração de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtidparadeletar.Text != "")
+            {
+                DialogResult exclusao = MessageBox.Show("Deseja realmentente excluir este registro??", "Alteração de registro", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (exclusao == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        cn.Open();
+                        cm.CommandText = "delete from tbl_gerentes  where cd_gerente = " + txtidparadeletar.Text;
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        limpatudo();
+                        MessageBox.Show("Funcionario deletado com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show(erro.Message);
+
+                    }
+
+                    finally
+                    {
+                        cn.Close();
+                        carregargerent();
+                    }
+                }
+            }
+            
         }
     }
 }

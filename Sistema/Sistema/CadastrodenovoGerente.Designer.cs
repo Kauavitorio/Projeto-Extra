@@ -45,6 +45,8 @@
             this.txtgambiara = new System.Windows.Forms.TextBox();
             this.dtgfunc = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btndeletar = new System.Windows.Forms.Button();
+            this.txtidparadeletar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgfunc)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +60,7 @@
             this.dtg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg.Size = new System.Drawing.Size(562, 213);
             this.dtg.TabIndex = 1;
+            this.dtg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_CellContentClick);
             // 
             // txtcpfgere
             // 
@@ -117,7 +120,6 @@
             this.txtsenhagere.Name = "txtsenhagere";
             this.txtsenhagere.Size = new System.Drawing.Size(201, 23);
             this.txtsenhagere.TabIndex = 54;
-            this.txtsenhagere.TextChanged += new System.EventHandler(this.txtsenhagere_TextChanged);
             // 
             // txtnomegere
             // 
@@ -267,12 +269,44 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Tabela dos Gerentes";
             // 
+            // btndeletar
+            // 
+            this.btndeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.btndeletar.FlatAppearance.BorderSize = 0;
+            this.btndeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeletar.ForeColor = System.Drawing.Color.White;
+            this.btndeletar.Location = new System.Drawing.Point(15, 251);
+            this.btndeletar.Name = "btndeletar";
+            this.btndeletar.Size = new System.Drawing.Size(277, 41);
+            this.btndeletar.TabIndex = 66;
+            this.btndeletar.Text = "Deletar";
+            this.btndeletar.UseVisualStyleBackColor = false;
+            this.btndeletar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtidparadeletar
+            // 
+            this.txtidparadeletar.BackColor = System.Drawing.Color.Black;
+            this.txtidparadeletar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtidparadeletar.Enabled = false;
+            this.txtidparadeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidparadeletar.ForeColor = System.Drawing.Color.White;
+            this.txtidparadeletar.Location = new System.Drawing.Point(12, 298);
+            this.txtidparadeletar.MaxLength = 50;
+            this.txtidparadeletar.Multiline = true;
+            this.txtidparadeletar.Name = "txtidparadeletar";
+            this.txtidparadeletar.Size = new System.Drawing.Size(147, 23);
+            this.txtidparadeletar.TabIndex = 67;
+            this.txtidparadeletar.Visible = false;
+            // 
             // CadastrodenovoGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.txtidparadeletar);
+            this.Controls.Add(this.btndeletar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgfunc);
             this.Controls.Add(this.txtgambiara);
@@ -320,5 +354,7 @@
         private System.Windows.Forms.TextBox txtgambiara;
         private System.Windows.Forms.DataGridView dtgfunc;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btndeletar;
+        private System.Windows.Forms.TextBox txtidparadeletar;
     }
 }
