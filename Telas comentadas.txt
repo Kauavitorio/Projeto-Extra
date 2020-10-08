@@ -2,7 +2,7 @@
 
 BaterPontoFunc - Concluido (quando for adicionado novos conteudos será atualizada) 
 
-BaterPontoGerente - Ainda não iniciado
+BaterPontoGerente - Concluido (quando for adicionado novos conteudos será atualizada) 
 
 CadastrodenovoGerente - Ainda não iniciado
 

@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Drawing;                           //  Copyright (c) 2020 Kauã Vitório
+using System.Linq;                              //  GitHub repositorio: https://github.com/Kauavitorio/Projeto-Extra
+using System.Text;                              //  Não esqueça de preencher as informaçoes do seu banco de dados nas conexões
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
 
 namespace Sistema
 {
@@ -18,6 +17,9 @@ namespace Sistema
         {
             InitializeComponent();
         }
+
+        //  Iniciando conexao com o banco de dados
+
         SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-I8J3S4E\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_redeextra");
         SqlCommand cm = new SqlCommand();
         SqlDataReader lerdados;
@@ -49,6 +51,13 @@ namespace Sistema
             
         }
 
+        //  Aqui estou declarando que quando eu clicar sobre a label1 ela ira exibir uma mensagem de aviso de desenvolvimento
+        //  Após enviar a mensagem ele coloca a data atual na textbox
+        //  E logo após ele ira verificar se a textbox filtro de data esta com algo escrito nela
+        //  Caso ela não esteja vazia ele ira tornar visivel a label tirar a data e deixar invisivel a tabel de colocar a data
+        //  Se estiver vazia ele ira deixar a label de tirar a data visivel
+        
+
         private void label1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Esse mecanicsmo esta em desenvolvimento\nCaso não tenha aparecido nada na tabela limpe o filtro e utiliza outro modo de busca","Ops...",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -63,6 +72,10 @@ namespace Sistema
                 lbltiradata.Visible = true;
             }
         }
+
+        //  Aqui estou declarando que quando haver a mudança dem texto da textbox do filtro da data ele ira executar alguns comandos
+        //  Se a textbox não estiver vazio ela ira tentar abrir a conexao com o banco de dados e ira selecionar todos os dados que seja relacionado a data do ponto 
+        //  Se a textbox estiver vazia ele ira atulizar a tabela
 
         private void txtfiltrodata_TextChanged(object sender, EventArgs e)
         {
@@ -93,6 +106,11 @@ namespace Sistema
             }
         }
 
+        //  Aqui estou mandando que ao carregar o from ele ira executar alguns comandos
+        //  Ira carregar a tabela 
+        //  Ira definir o texto,background das linhas e backgroud geral como black
+        //  Ira definir o nome de cada coluno com o nome correspondente definido a baixo
+
         private void BaterPontoGerente_Load(object sender, EventArgs e)
         {
             carregarpontos();
@@ -113,6 +131,9 @@ namespace Sistema
             dtg.Columns[5].HeaderText = "Código do Ponto";
         }
 
+        //  Aqui estou definindo que quando clicar na label de retirar senha ele ira executar alguns comandos
+        //  Ele ira limpar a textbox filtro da data,deixar a label de tirar a data invisivel, torna visivel a label de colocar data e focar na textboxfiltro de codigo
+
         private void lbltiradata_Click(object sender, EventArgs e)
         {
             txtfiltrodata.Text = "";
@@ -120,6 +141,11 @@ namespace Sistema
             lblcolocardata.Visible = true;
             txtfiltrocd.Focus();
         }
+
+        //  Aqui estou definindo que quando haver mudança no texto da textbox filtro de codigo ele ira realizar alguns comandos
+        //  Ele ira verificar se a textbox esta vazia
+        //  Se ela não estiver vazia ela ira tentar abrir a conexao com o banco de dados e selecionar na tabela de bater ponto tudo relacionado com a textbox
+        //  Se estiver vazia ele ira atualizar a tabela
 
         private void txtfiltrocd_TextChanged(object sender, EventArgs e)
         {
@@ -149,6 +175,11 @@ namespace Sistema
                 carregarpontos();
             }
         }
+
+        //  Aqui estou definindo que quando haver mudança no texto da textbox filtro de nome ele ira realizar alguns comandos
+        //  Ele ira verificar se a textbox esta vazia
+        //  Se ela não estiver vazia ela ira tentar abrir a conexao com o banco de dados e selecionar na tabela de bater ponto tudo relacionado com a textbox
+        //  Se estiver vazia ele ira atualizar a tabela
 
         private void txtfiltronome_TextChanged(object sender, EventArgs e)
         {
@@ -180,3 +211,8 @@ namespace Sistema
         }
     }
 }
+
+
+        //  Copyright (c) 2020 Kauã Vitório
+        //  GitHub repositorio: https://github.com/Kauavitorio/Projeto-Extra
+        //  Não esqueça de preencher as informaçoes do seu banco de dados nas conexões
